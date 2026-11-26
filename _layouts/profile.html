@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zhiyuan Guan’s research, publications and teaching at Shanghai Jiao Tong University.">
+  <title>{{ site.title }} | Academic Homepage</title>
+  <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+<header class="mast">
+  <nav aria-label="Page sections"><a class="home" href="#about-me">Zhiyuan Guan</a>
+    {% for item in site.data.navigation.main %}<a href="{{ item.url }}">{{ item.title }}</a>{% endfor %}
+  </nav>
+</header>
+<main class="canvas">
+  <aside class="profile">
+    <img class="portrait" src="{{ site.author.avatar }}" alt="Zhiyuan Guan" width="168" height="168">
+    <div><h1>{{ site.author.name }}</h1><p class="han" lang="zh">关致远</p>
+    <p>Master’s student<br>Global College<br>Shanghai Jiao Tong University</p>
+    <div class="contact" role="group" aria-label="Contact and profiles">
+      <a href="mailto:{{ site.author.email }}" aria-label="Email Zhiyuan Guan" title="{{ site.author.email }}"><span aria-hidden="true">&#xf0e0;</span></a>
+      <a href="{{ site.author.googlescholar }}" aria-label="Google Scholar" title="Google Scholar"><span aria-hidden="true">&#xf19d;</span></a>
+      <a href="https://github.com/{{ site.author.github }}" aria-label="GitHub" title="GitHub"><span class="brand" aria-hidden="true">&#xf09b;</span></a>
+    </div></div>
+  </aside>
+  <article>{{ content }}</article>
+</main>
+</body>
+</html>
